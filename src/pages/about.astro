@@ -54,30 +54,4 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       }
     </div>
   </Container>
----
-import AutoScrollCarousel from '../components/AutoScrollCarousel.astro';
-
-const images = [
-  '/placeholder.svg?height=200&width=300',
-  '/placeholder.svg?height=200&width=300',
-  '/placeholder.svg?height=200&width=300',
-  '/placeholder.svg?height=200&width=300',
-  '/placeholder.svg?height=200&width=300',
-  '/placeholder.svg?height=200&width=300',
-];
----
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Auto-scrolling Image Carousel</title>
-  </head>
-  <body>
-    <h1>Auto-scrolling Image Carousel</h1>
-    <AutoScrollCarousel images={images} />
-  </body>
-</html>
-
 </Layout>
