@@ -54,4 +54,32 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       }
     </div>
   </Container>
+<!-- Horizontal Scrolling Container -->
+<div class="scroll-container">
+  <div class="scrolling-images">
+    <img src="hero.png" alt="Image 1" />
+    <img src="hero2.png" alt="Image 2" />
+    <img src="hero-alt.png" alt="Image 3" />
+    <!-- Add more images as needed -->
+  </div>
+</div>
+
+<style>
+  .scroll-container {
+    overflow-x: scroll;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .scrolling-images {
+    display: flex;
+    gap: 20px; /* Adjust the gap between images */
+  }
+
+  .scrolling-images img {
+    width: 300px; /* Set a fixed width or use responsive sizing */
+    height: auto;
+  }
+</style>
+
 </Layout>
