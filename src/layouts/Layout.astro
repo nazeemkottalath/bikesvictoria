@@ -21,8 +21,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Bikes Victoria"
+  : "Rent Bikes in Victoria BC from $15";
 ---
 
 <!DOCTYPE html>
@@ -36,18 +36,14 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="=Cheap Bike Rentals in Victoria BC."
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Bikes Victoria - Cheap Bike Rentals in Victoria BC`,
           image: resolvedImageWithDomain,
         },
         image: {
