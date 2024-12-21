@@ -17,6 +17,15 @@ module.exports = {
         purple: '#6701E6',  // Add custom purple color here
         darkPurple: '#5a01b3', // You can add the hover color too
       },
+      animation: {
+        'fade-in': 'fade-in 0.5s ease-out forwards', // Custom fade-in animation
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
