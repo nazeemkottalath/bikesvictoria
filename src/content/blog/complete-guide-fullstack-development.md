@@ -1,15 +1,12 @@
 ---
 draft: false
 title: "Bike itineraries to explore downtown Victoria and vicinity"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+snippet: "Explore Victoria, BC, on two wheels and uncover its bike-friendly charm! From the iconic Inner Harbour to scenic trails like the Galloping Goose and Dallas Road, cycling offers a unique way to experience the city's natural beauty and historic sites. With affordable bike rentals from bikesvictoria.com, your adventure begins hassle-free. Discover must-see stops, coastal views, and hidden gems at your own pace. Start your cycling journey in Victoria today."
 image: {
     src: "https://images.unsplash.com/photo-1501147830916-ce44a6359892?&fit=crop&w=430&h=240",
     alt: "bike rentals in Victoria BC"
 }
 publishDate: "2022-11-08 11:39"
-category: "Tutorials"
-author: "Janette Lynch"
-tags: [itineraries, bike rentals, bikes in Victoria BC]
 ---
 
 Victoria, a city known for its picturesque landscapes and historic architecture, is a haven for cyclists. Its bike-friendly culture and infrastructure make it an ideal destination for two-wheeled exploration.
