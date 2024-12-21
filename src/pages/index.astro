@@ -29,7 +29,7 @@ import Layout from "@layouts/Layout.astro";
     </div>
   </Container>
 
-  <!-- Updated JSON-LD with Missing Fields -->
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,13 +42,13 @@ import Layout from "@layouts/Layout.astro";
         "@type": "Product",
         "name": "Cheap Bike Rentals in Victoria",
         "description": "Rent basic, reliable bikes to explore Victoria, BC at cheap rates.",
-        "image": "http://bikesvictoria.com/opengraph.jpg",  // Replace with an actual image URL
+        "image": "https://bikesvictoria.com/opengraph.jpg",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "CAD",
           "price": "15",
-          "url": "http://bikesvictoria.com/rent",
-          "availability": "https://schema.org/InStock"
+          "url": "https://bikesvictoria.com",
+          "availability": "InStock"
         }
       },
       "startTime": "2024-12-21T00:00:00",
@@ -56,4 +56,3 @@ import Layout from "@layouts/Layout.astro";
     }
   </script>
 </Layout>
-
