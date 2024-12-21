@@ -5,7 +5,6 @@ import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
-import PricingCard from "@components/pricing.astro";
 ---
 
 <Layout title="">
@@ -17,9 +16,9 @@ import PricingCard from "@components/pricing.astro";
   <Container class="flex justify-between items-start space-x-8 mt-20">
     <!-- Left Side Text -->
     <div class="w-1/2">
-      <h2 class="text-2xl font-bold">What Our Riders Say</h2>
+      <h2 class="text-2xl font-bold">Wall of Love</h2>
       <p class="text-lg mt-2 text-gray-600">
-        Our riders love sharing their experiences with us! Here are some of their kind words about our service and bike rentals.
+        Here are some kind words about our bike rentals.
       </p>
     </div>
 
@@ -30,7 +29,7 @@ import PricingCard from "@components/pricing.astro";
     </div>
   </Container>
 
-  <!-- Static JSON-LD (without dynamic variables for now) -->
+  <!-- Updated JSON-LD with Missing Fields -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,12 +40,15 @@ import PricingCard from "@components/pricing.astro";
       },
       "object": {
         "@type": "Product",
-        "name": "Affordable Bike Rentals in Victoria",
+        "name": "Cheap Bike Rentals in Victoria",
+        "description": "Rent basic, reliable bikes to explore Victoria, BC at cheap rates.",
+        "image": "http://bikesvictoria.com/opengraph.jpg",  // Replace with an actual image URL
         "offers": {
           "@type": "Offer",
           "priceCurrency": "CAD",
           "price": "15",
-          "url": "http://bikesvictoria.com/rent"
+          "url": "http://bikesvictoria.com/rent",
+          "availability": "https://schema.org/InStock"
         }
       },
       "startTime": "2024-12-21T00:00:00",
@@ -54,3 +56,4 @@ import PricingCard from "@components/pricing.astro";
     }
   </script>
 </Layout>
+
