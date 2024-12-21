@@ -8,7 +8,7 @@
     <button class="w-full text-left p-4 bg-purple-500 text-white rounded-t-lg focus:outline-none focus:ring-2 focus:ring-purple-400" on:click="toggleAccordion(0)">
       What is WCAG and why is it important?
     </button>
-    <div id="accordion-content-0" class="hidden p-4 bg-gray-100 rounded-b-lg">
+    <div id="accordion-content-0" class="hidden p-4 bg-gray-100 rounded-b-lg accordion-content">
       <p>
         WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web accessibility...
       </p>
@@ -20,7 +20,7 @@
     <button class="w-full text-left p-4 bg-purple-500 text-white rounded-t-lg focus:outline-none focus:ring-2 focus:ring-purple-400" on:click="toggleAccordion(1)">
       What's the difference between ARIA labels and alt text?
     </button>
-    <div id="accordion-content-1" class="hidden p-4 bg-gray-100 rounded-b-lg">
+    <div id="accordion-content-1" class="hidden p-4 bg-gray-100 rounded-b-lg accordion-content">
       <p>
         Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label, aria-labelledby)...
       </p>
@@ -32,7 +32,7 @@
     <button class="w-full text-left p-4 bg-purple-500 text-white rounded-t-lg focus:outline-none focus:ring-2 focus:ring-purple-400" on:click="toggleAccordion(2)">
       Why is keyboard navigation important?
     </button>
-    <div id="accordion-content-2" class="hidden p-4 bg-gray-100 rounded-b-lg">
+    <div id="accordion-content-2" class="hidden p-4 bg-gray-100 rounded-b-lg accordion-content">
       <p>
         Keyboard navigation is essential for users who can't use a mouse, including people with motor disabilities...
       </p>
@@ -41,13 +41,12 @@
 </div>
 
 <script>
-  // JavaScript for toggling the accordion content
   function toggleAccordion(index) {
     const content = document.getElementById(`accordion-content-${index}`);
     const isHidden = content.classList.contains('hidden');
     
     // Hide all content
-    const allContents = document.querySelectorAll('.hidden');
+    const allContents = document.querySelectorAll('.accordion-content');
     allContents.forEach(item => item.classList.add('hidden'));
     
     // If it was hidden, show it
