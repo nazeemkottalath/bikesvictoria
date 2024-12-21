@@ -6,7 +6,18 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import PricingCard from "@components/pricing.astro";
+
+const bikeDetails = {
+  name: 'Cheap Bike Rentals in Victoria',
+  price: 15,
+  currency: 'CAD',
+  rentalUrl: 'https://bikesvictoria.com',
+  startTime: '2024-12-21T00:00:00',
+  endTime: '2024-12-21T23:59:59',
+  agentName: 'Bikes Victoria',
+};
 ---
+
 <Layout title="">
   <Container>
     <Hero />
@@ -28,4 +39,29 @@ import PricingCard from "@components/pricing.astro";
       <div class="senja-embed" data-id="4027efbf-fd47-41fe-aaff-4d8deff65e28" data-mode="shadow" data-lazyload="false" style="display: block;"></div>
     </div>
   </Container>
+
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "RentAction",
+        "agent": {
+          "@type": "Organization",
+          "name": "${bikeDetails.agentName}"
+        },
+        "object": {
+          "@type": "Product",
+          "name": "${bikeDetails.name}",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "${bikeDetails.currency}",
+            "price": "${bikeDetails.price}",
+            "url": "${bikeDetails.rentalUrl}"
+          }
+        },
+        "startTime": "${bikeDetails.startTime}",
+        "endTime": "${bikeDetails.endTime}"
+      }
+    `}
+  </script>
 </Layout>
