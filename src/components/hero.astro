@@ -4,17 +4,21 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 md:block opacity-0 animate-fade-in">
-    <Picture
-      src={heroImage}
-      alt="Cheap Bike Rentals in Victoria BC"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-      class="rounded-xl"
-    />
-  </div>
+---
+import { Picture } from 'astro:assets';
+import heroImage from '../assets/hero.png';  // Adjust the path as needed
+---
+<div class="py-6 md:order-1 md:block opacity-0 animate-fade-in">
+  <Picture
+    src={heroImage}
+    alt="Cheap Bike Rentals in Victoria BC"
+    widths={[200, 400, 600]}
+    sizes="(max-width: 800px) 100vw, 620px"
+    loading="eager"
+    format="avif"
+    class="rounded-xl"
+  />
+</div>
   <div class="opacity-0 animate-fade-in">
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Rent basic but reliable bikes in Victoria
