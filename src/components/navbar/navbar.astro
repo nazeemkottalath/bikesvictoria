@@ -59,29 +59,31 @@ const menuitems = [
       </Link>
     </div>
 
-    <!-- Mobile Menu (Hidden by default) -->
-    <div class="lg:hidden fixed top-16 left-0 w-full bg-white shadow-md hidden flex-col gap-4 p-6" id="mobileMenu">
-      <ul class="flex flex-col gap-4">
-        {menuitems.map((item, index) => (
-          <li key={index}>
-            <a
-              href={item.path}
-              class="text-gray-600 hover:text-gray-900 font-medium"
-            >
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <Link
-        href="/contact"
-        class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded block text-center"
-      >
-        Book Now
-      </Link>
-    </div>
-  </nav>
-</header>
+ <!-- Mobile Menu (Hidden by default) -->
+<div class="lg:hidden fixed top-16 left-0 w-full bg-white shadow-md hidden flex-col gap-6 p-6" id="mobileMenu">
+  <ul class="flex flex-col gap-4">
+    {menuitems.map((item, index) => (
+      <li key={index}>
+        <a
+          href={item.path}
+          class="text-gray-600 hover:text-gray-900 font-medium"
+        >
+          {item.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <!-- Add a gap here specifically for the Book Now button -->
+  <div class="mt-4">
+    <Link
+      href="/contact"
+      class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded block text-center"
+    >
+      Book Now
+    </Link>
+  </div>
+</div>
+
 
 <!-- Prevent Content Overlap -->
 <main class="pt-20">
