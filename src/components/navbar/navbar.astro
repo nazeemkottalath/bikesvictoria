@@ -24,76 +24,44 @@ const menuitems = [
 ];
 ---
 
-<Container>
-  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-    <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between px-4 py-3 lg:px-6">
-        <a href="/" class="text-lg flex items-center">
-          <!-- Logo image -->
-          <img src="/BikesVictoriaLogo.png" alt="Bikes Victoria Logo" class="h-8 mr-2" />
-          <!-- Text -->
-          <span class="font-bold text-black">Bikes</span><span class="font-bold text-black">Victoria</span>
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-6 h-6 text-gray-800" />
-        </div>
-      </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-4">
-          {
-            menuitems.map((item, index) => (
-              <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
+<header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+  <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+    <!-- Logo Section -->
+    <a href="/" class="flex items-center gap-2">
+      <img src="/BikesVictoriaLogo.png" alt="Bikes Victoria Logo" class="h-8" />
+      <span class="font-bold text-lg text-black">BikesVictoria</span>
+    </a>
 
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-4 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span>{item.title}</span>
-                      {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                )}
-              </>
-            ))
-          }
-        </ul>
-        <!-- Mobile Button -->
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link
-            href="/contact"
-            size="md"
-            class="bg-purple text-white hover:bg-darkPurple border-2 border-transparent px-6 py-3 rounded text-center">
-            Book Now
-          </Link>
-        </div>
-      </MenuItems>
-    </Astronav>
+    <!-- Menu Section -->
+    <ul class="hidden lg:flex items-center gap-6">
+      {menuitems.map((item, index) => (
+        <li key={index}>
+          <a
+            href={item.path}
+            class="text-gray-600 hover:text-gray-900 font-medium"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))}
+    </ul>
 
-    <!-- Desktop Button -->
-    <div class="hidden lg:flex items-center gap-4 px-4 py-3">
-      <Link
-        href="/contact"
-        size="md"
-        class="bg-purple font-bold text-white hover:bg-darkPurple border-2 border-transparent px-6 py-3 rounded text-center">
-        Book Now
-      </Link>
+    <!-- Button Section -->
+    <Link
+      href="/contact"
+      class="hidden lg:block bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded"
+    >
+      Book Now
+    </Link>
+
+    <!-- Mobile Menu Icon -->
+    <div class="lg:hidden">
+      <MenuIcon class="w-6 h-6 text-gray-800" />
     </div>
-  </header>
-</Container>
+  </nav>
+</header>
 
-<!-- Add padding-top to prevent content from being overlapped by fixed navbar -->
+<!-- Prevent Content Overlap -->
 <main class="pt-20">
-  <!-- Your page content goes here -->
+  <!-- Page content here -->
 </main>
