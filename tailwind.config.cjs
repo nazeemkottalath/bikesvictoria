@@ -15,7 +15,7 @@ module.exports = {
       },
       colors: {
         purple: '#6701E6',  // Add custom purple color here
-        darkPurple: '#5a01b3', // You can add the hover color too
+        darkPurple: '#5a01b3 !important', // You can add the hover color too
       },
     },
   },
