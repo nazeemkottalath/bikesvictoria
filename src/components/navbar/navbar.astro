@@ -61,7 +61,7 @@ const menuitems = [
 
     <!-- Mobile Menu (Hidden by default) -->
     <div class="lg:hidden fixed top-16 left-0 w-full bg-white shadow-md hidden flex-col gap-4 p-6" id="mobileMenu">
-      <ul class="flex flex-col gap-6">
+      <ul class="flex flex-col gap-4">
         {menuitems.map((item, index) => (
           <li key={index}>
             <a
@@ -75,7 +75,7 @@ const menuitems = [
       </ul>
       <Link
         href="/contact"
-        class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded block text-center"
+        class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded block text-center mt-4"
       >
         Book Now
       </Link>
