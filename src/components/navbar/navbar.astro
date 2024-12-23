@@ -1,3 +1,29 @@
+---
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Dropdown from "./dropdown.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuitems = [
+  {
+    title: "Pricing",
+    path: "/pricing",
+  },
+  {
+    title: "About",
+    path: "/about",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+  },
+];
+---
+
 <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
   <nav class="container mx-auto flex items-center justify-between py-4 px-6">
     <!-- Logo Section -->
@@ -8,7 +34,7 @@
 
     <!-- Mobile Menu Icon -->
     <div class="lg:hidden">
-      <MenuIcon class="w-6 h-6 text-gray-800 cursor-pointer" />
+      <MenuIcon class="w-6 h-6 text-gray-800" />
     </div>
 
     <!-- Menu and Button Section (Desktop) -->
@@ -34,10 +60,7 @@
     </div>
 
     <!-- Mobile Menu (Hidden by default) -->
-    <div
-      class="lg:hidden fixed top-20 left-0 w-full bg-white shadow-md hidden flex-col gap-4 p-6"
-      id="mobileMenu"
-    >
+    <div class="lg:hidden fixed top-16 left-0 w-full bg-white shadow-md hidden flex-col gap-4 p-6" id="mobileMenu">
       <ul class="flex flex-col gap-4">
         {menuitems.map((item, index) => (
           <li key={index}>
@@ -61,7 +84,7 @@
 </header>
 
 <!-- Prevent Content Overlap -->
-<main class="pt-24 lg:pt-20">
+<main class="pt-20">
   <!-- Page content here -->
 </main>
 
