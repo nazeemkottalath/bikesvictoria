@@ -32,31 +32,53 @@ const menuitems = [
       <span class="font-bold text-lg text-black">BikesVictoria</span>
     </a>
 
-    <!-- Menu Section -->
-    <ul class="hidden lg:flex items-center gap-6">
-      {menuitems.map((item, index) => (
-        <li key={index}>
-          <a
-            href={item.path}
-            class="text-gray-600 hover:text-gray-900 font-medium"
-          >
-            {item.title}
-          </a>
-        </li>
-      ))}
-    </ul>
-
-    <!-- Button Section -->
-    <Link
-      href="/contact"
-      class="hidden lg:block bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded"
-    >
-      Book Now
-    </Link>
-
     <!-- Mobile Menu Icon -->
     <div class="lg:hidden">
       <MenuIcon class="w-6 h-6 text-gray-800" />
+    </div>
+
+    <!-- Menu and Button Section (Desktop) -->
+    <div class="hidden lg:flex items-center gap-6 ml-auto">
+      <ul class="flex items-center gap-6">
+        {menuitems.map((item, index) => (
+          <li key={index}>
+            <a
+              href={item.path}
+              class="text-gray-600 hover:text-gray-900 font-medium"
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <Link
+        href="/contact"
+        class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded"
+      >
+        Book Now
+      </Link>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="lg:hidden fixed top-16 left-0 w-full bg-white shadow-md hidden flex-col gap-4 p-6" id="mobileMenu">
+      <ul class="flex flex-col gap-4">
+        {menuitems.map((item, index) => (
+          <li key={index}>
+            <a
+              href={item.path}
+              class="text-gray-600 hover:text-gray-900 font-medium"
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <Link
+        href="/contact"
+        class="bg-purple text-white font-bold hover:bg-darkPurple border-2 border-transparent px-6 py-2 rounded block text-center"
+      >
+        Book Now
+      </Link>
     </div>
   </nav>
 </header>
@@ -65,3 +87,13 @@ const menuitems = [
 <main class="pt-20">
   <!-- Page content here -->
 </main>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  const menuIcon = document.querySelector('.lg\\:hidden');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
