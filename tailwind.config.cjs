@@ -15,7 +15,10 @@ module.exports = {
       },
       colors: {
         purple: '#6701E6',  // Add custom purple color here
-        darkPurple: '#5a01b3 !important', // You can add the hover color too
+        darkPurple: '#5a01b3', // You can add the hover color too
+      },
+      backgroundImage: {
+        'testimonial-gradient': 'radial-gradient(89.8% 46.9% at 50% 56.6%, #6b17a3 0%, rgba(5, 2, 41, 1) 100%)',
       },
     },
   },
